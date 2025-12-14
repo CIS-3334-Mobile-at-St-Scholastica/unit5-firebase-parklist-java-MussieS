@@ -26,19 +26,19 @@ public class ParkAdapter extends ListAdapter<Park, ParkAdapter.ParkViewHolder> {
 
     private static final DiffUtil.ItemCallback<Park> PARK_DIFF_CALLBACK =
             new DiffUtil.ItemCallback<Park>() {
-        @Override
-        public boolean areItemsTheSame(@NonNull Park oldItem, @NonNull Park newItem) {
-            return oldItem.getId().equals(newItem.getId());
-        }
+                @Override
+                public boolean areItemsTheSame(@NonNull Park oldItem, @NonNull Park newItem) {
+                    return oldItem.getId().equals(newItem.getId());
+                }
 
-        @Override
-        public boolean areContentsTheSame(@NonNull Park oldItem, @NonNull Park newItem) {
-            // For simplicity, we can just compare names and addresses.
-            // For a more robust comparison, compare all fields.
-            return oldItem.getName().equals(newItem.getName()) &&
-                   oldItem.getAddress().equals(newItem.getAddress());
-        }
-    };
+                @Override
+                public boolean areContentsTheSame(@NonNull Park oldItem, @NonNull Park newItem) {
+                    // For simplicity, we can just compare names and addresses.
+                    // For a more robust comparison, compare all fields.
+                    return oldItem.getName().equals(newItem.getName()) &&
+                            oldItem.getAddress().equals(newItem.getAddress());
+                }
+            };
 
     @NonNull
     @Override
